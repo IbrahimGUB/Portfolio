@@ -1,0 +1,198 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Calibri', sans-serif; /* Calibri font family */
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Make the container look like a PDF page */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    height: auto;
+    min-height: 1123px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #000000; /* Blue underline */
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header .photo img {
+    width: 170px; /* Slightly larger profile image */
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid #000000; /* Thinner blue border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header .contact-info {
+    flex: 1;
+    text-align: right;
+    padding-left: 20px;
+}
+
+.header h1 {
+    font-size: 2.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: #666;
+    margin: 5px 0;
+}
+
+.header a {
+    color: #007BFF; /* Blue email and social links */
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.header a:hover {
+    color: #00b318;
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 40px;
+    font-size: 1.1rem; /* Same size as soft/hard skills */
+    color: #444;
+}
+
+.section a {
+    color: #007BFF; /* Make links blue for consistency */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.section a:hover {
+    text-decoration: underline;
+}
+
+.section h2 {
+    font-size: 1.5rem;
+    color: #003366; /* Navy blue for section headers */
+    margin-bottom: 10px;
+    position: relative;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 3px;
+    background-color: #003366; /* Match navy blue underline */
+    bottom: 0;
+    left: 0;
+}
+
+/* List styling */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    padding-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #4CAF50;
+    font-size: 1.2rem;
+}
+
+/* Treat Soft and Hard Skills as Sections */
+.skills-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.skills-content > div {
+    flex: 1;
+}
+
+.skills-content h2 {
+    font-size: 1.5rem;
+    color: #003366; /* Navy blue section headers */
+    margin-bottom: 10px;
+}
+
+.skills-content ul {
+    padding-left: 0;
+}
+
+/* Social links */
+.social-links p i {
+    color: #007BFF;
+    margin-right: 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social-links p a {
+    color: #007BFF;
+    font-weight: bold;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links p:hover i {
+    color: #0056b3;
+    transform: scale(1.2);
+}
+
+.social-links p:hover a {
+    color: #0056b3;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header .contact-info {
+        text-align: center;
+        padding: 0;
+        margin-top: 20px;
+    }
+
+    .skills-content {
+        flex-direction: column;
+    }
+}
