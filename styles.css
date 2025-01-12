@@ -90,13 +90,20 @@ body {
 }
 
 /* Section Styling */
+/* Section styling with zoom effect */
 .section {
     margin-bottom: 40px;
-    font-size: 1.1rem; /* Same size as soft/hard skills */
+    font-size: 1.1rem;
     color: #444;
     opacity: 0;
     animation: fadeIn 1.5s forwards;
-    animation-delay: 1s; /* Delay animations for sections */
+    animation-delay: 1s;
+    transition: transform 0.3s ease-in-out; /* Smooth transition for zoom effect */
+}
+
+/* Zoom effect on hover */
+.section:hover {
+    transform: scale(1.03); /* Slightly zoom in on hover */
 }
 
 .section h2 {
@@ -244,4 +251,109 @@ a:hover {
     .skills-content {
         flex-direction: column;
     }
+}
+
+
+/* General styling adjustments for better layout */
+body, .wrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #003366;
+    padding: 10px 0;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap items for smaller screens */
+}
+
+.navbar ul li {
+    margin: 0 10px;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1rem;
+    padding: 8px 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #007BFF;
+    color: #ffffff;
+}
+
+/* Container styling */
+.container {
+    max-width: 800px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    transition: box-shadow 0.3s ease; /* Smooth transition */
+}
+
+.container:hover {
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15); /* Enhanced shadow on hover */
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Responsive Design for Mobile View */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column; /* Stack navbar items vertically on small screens */
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+    }
+
+    .container {
+        padding: 20px;
+    }
+}
+
+
+/* Footer styling */
+footer {
+    background-color: #003366;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #007BFF;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ffffff;
 }
